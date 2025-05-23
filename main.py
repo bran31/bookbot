@@ -1,17 +1,22 @@
+import sys
 from stats import *
+
 
 def get_book_text(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()
     return file_contents
+
+
 def main():
-    path_to_file = "books/frankenstein.txt"
+    path_to_file = sys.argv[1]
     book = get_book_text(path_to_file)
-    # print(book)
     num = count_letters(book)
     letters = repeats(book)
-    final = report(letters)
-    print(f"{num} words found in the document")
+    print(f"Found {num} total words")
     print(letters)
-    print(final)
+    for key in sorted(letters):
+        print("%s: %s" % (key, letters[key]))
+
+
 main()
