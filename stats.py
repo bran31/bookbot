@@ -4,7 +4,6 @@ def count_letters(file):
 
 def repeats(file):
     letters = file.lower()
-    
     p = 0
     t = 0
     c = 0
@@ -22,4 +21,11 @@ def repeats(file):
     return ans   
 
 def report(file):
-    pass
+    q = file
+    for i,j in q.items():   
+        if i == 't':
+            count = {{'char': i, 'num': j}}
+        elif i == 'e':
+            count = {{'char': i, 'num': j}}
+    return count
+            

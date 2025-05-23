@@ -10,6 +10,8 @@ def main():
     # print(book)
     num = count_letters(book)
     letters = repeats(book)
+    final = report(letters)
     print(f"{num} words found in the document")
     print(letters)
+    print(final)
 main()
